@@ -312,7 +312,7 @@ if stage == 1:
     f.write('qm_mask = %s\n'%qm_mask)
     f.write('qm_charge = %d\n'%qm_charge)
     f.close()
-    os.system('auto_backmap_docking_sd.py auto_backmap_docking.cntrl')
+    os.system('auto_backmap_docking.py auto_backmap_docking.cntrl')
     os.chdir('../')
 
     if (not os.path.exists('auto_backmap_docking/complex.prmtop') 
