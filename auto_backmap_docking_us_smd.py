@@ -13,7 +13,7 @@ import numpy as np
 ################# Arguments #################
 if len(sys.argv) != 2:
     print('Error: Wrong number of arguments')
-    print('Usage: python auto_backmap_docking.py cntrl_file')
+    print('Usage: python auto_backmap_docking_us_smd.py cntrl_file')
     sys.exit()
 cntrl_file = sys.argv[1]
 
