@@ -281,7 +281,7 @@ if if_trimerize:
         f_log.close()
         if os.path.exists('trimerization'):
             os.system('rm -rf trimerization')
-        os.system('trimerization_sd.py '+trimer_ref_pdb+' protein.pdb '+aa_ref_pdb+' '+str(ppn)+' '+('%.2f'%temp))
+        os.system('trimerization.py '+trimer_ref_pdb+' protein.pdb '+aa_ref_pdb+' '+str(ppn)+' '+('%.2f'%temp))
         if not os.path.exists('trimer.pdb'):
             f_log = open('auto_backmap_docking.log', 'a')
             f_log.write('Error: Fail to build trimer model from protein.pdb\n')
@@ -305,7 +305,7 @@ if stage <= 4:
     f.write('ppn = %d\n'%ppn)
     f.write('temperature = %.2f\n'%temp)
     f.close()
-    os.system('docking_mr_sd_noP.py docking.cntrl')
+    os.system('docking.py docking.cntrl')
     
     if not os.path.exists('reactant_complex.ncrst'):
         f_log = open('auto_backmap_docking.log', 'a')
