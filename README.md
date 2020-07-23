@@ -4,7 +4,7 @@
 
 This is a package of python (3.X) scripts that are used to estimate activation free energy, as well as the ligand binding affinity, for a protein structure obtained from a [coarse-grained (CG) simulation](https://git.psu.edu/obrien/yang_jiang/cg_simtk_protain_folding). All the scripts are ready to use when users have added the directories (including all the child folders) in `$PATH` (add `export PATH=${PATH}:/path/to/one/folder/` in your `~/.bashrc` file) and have granted the execution permission (`chmod -R +x ./act_ene_estimation/`) for all the scripts. 
 
-:warning: The workflow requires additional softwares installed prior to use. Please click `Learn more` in the following script instruction tables to find detailed instruction of usage and basic theory used in the script.
+:warning: The workflow requires `Amber` (16+), `Autodock vina`, `wham`, and `SymmDock` installed prior to use. Please click `Learn more` in the following script instruction tables to find detailed instruction of usage and basic theory used in the script.
 
 ### Table of Contents
   * [1. Introduction](#1-introduction)
@@ -30,7 +30,12 @@ graph TD;
 - To run the workflow, use `auto_backmap_docking_us_smd.py` ([Learn more]()). You can also run one of the above steps by using the corresponding script.
 
 ### 2. Trimerization
+- In some special cases, a monomer protein does not have the enzymatic activity. For example, type III Chloramphenicol acetyltransferase ([CAT-III](https://www.uniprot.org/uniprot/P00484#interaction)), which is an effector of chloramphenicol resistance in bacteria, is a homotrimer and construct the substrate binding pockets by the residues from each two monomers. The multimer structure is essential to use when we study the substrate binding and enzymatic activity. In this workflow, we only implemented the procedure for predicting the trimer structure of CAT-III. Users need to modify the source code to implement other multimer predictions.
+- Script to be used in this section:
 
+| Scripts | Instructions |
+| ------ | ------ |
+| docking/**trimerization.py** | Predict the trimer structure by using the all-atom monomer structure for CAT-III. Need to get the `Amber` (16+) and `SymmDock` installed prior to use. ([Learn more](../../wikis/help_wiki/trimerization.py)) |
 
 ### 3. Substrate Docking
 
