@@ -10,15 +10,26 @@ This is a package of python (3.X) scripts that are used to estimate activation f
   * [1. Introduction](#1-introduction)
   * [2. Trimerization](#2-trimerization)
   * [3. Substrate Docking](#3-substrate-docking)
-  * [4. Umbrella Sampling with QM/MM Simulations](#4-umbrella-sampling-with-qmmm-simulations)
+  * [4. QM/MM Umbrella Sampling Simulations](#4-qmmm-umbrella-sampling-simulations)
   * [5. Adaptive Steered Molecular Dynamics Simulations](#5-adaptive-steered-molecular-dynamics-simulations)
 
 ### 1. Introduction
+The workflow includes the following procedures as illustrated in Fig. 1: (1) Backmap from the coarse-grained structure to the all-atom structure; (2) Predict the trimer structure if needed; (3) Predict protein-substrate complex structure using substrate  docking; (4) Estimated activation free energy barrier height based on given reaction coordinates using QM/MM umbrella sampling simulations; (5) Estimate binding affinity using adaptive steered molecular dynamics simulations.
+
+```mermaid
+graph TD;
+  A[Coarse-grained protein structure] -->|Backmap| B(All-atom monomer structure)
+  B-->|Trimerization, if needed| C(All-atom trimer structure)
+  B-->|Substrate docking| D(Protein-substrate complex)
+  C-->|Substrate docking| D
+  D-->|QM/MM umbrella sampling simulations| E[Activation free energy barrier height]
+  D-->|Adaptive steered molecular dynamics| F[Substrate binding affinity]
+```
 
 ### 2. Trimerization
 
 ### 3. Substrate Docking
 
-### 4. Umbrella Sampling with QM/MM Simulations
+### 4. QM/MM Umbrella Sampling Simulations
 
 ### 5. Adaptive Steered Molecular Dynamics Simulations
