@@ -33,13 +33,13 @@ graph TD;
 - In some special cases, a monomer protein does not have the enzymatic activity. For example, type III Chloramphenicol acetyltransferase ([CAT-III](https://www.uniprot.org/uniprot/P00484#interaction)), which is an effector of chloramphenicol resistance in bacteria, is a homotrimer and constructs its substrate binding pocket by the residues from two monomers. The multimer structure is essential to use when we study the substrate binding and enzymatic activity. In this workflow, we only implemented the procedure for predicting the trimer structure of CAT-III. Users need to modify the source code to implement other multimer predictions.
 - Script to be used in this section:
 
-| Scripts | Instructions |
+| Script | Instructions |
 | ------ | ------ |
 | docking/**trimerization.py** | Predict the trimer structure by using the all-atom monomer structure for CAT-III. Need to get the `Amber` (16+) and `SymmDock` installed prior to use. ([Learn more](../../wikis/help_wiki/trimerization.py)) |
 
 ### 3. Substrate Docking
 - In order to estimate the substrate binding and enzymatic activity, the protein-reactant complex structure must be predicted. For those proteins that have the crystal structure resolved for the protein-reactant complex, users can directly use that crystal structure. However, most of the proteins that we are interested in do not have the crystal complex structure resolved. Users need to use the scripts in this section to predict the protein-reactant complex structure.
-- Script to be used in this section:
+- Scripts to be used in this section:
 
 | Scripts | Instructions |
 | ------ | ------ |
@@ -47,5 +47,18 @@ graph TD;
 | docking/**auto_backmap_docking.py** | An automated script to call `backmap.py` (found [here](https://git.psu.edu/obrien/yang_jiang/cg_simtk_protain_folding#6-backmapping-from-coarse-grained-model-to-all-atom-model)), `trimerization.py` and `docking.py`. ([Learn more](../../wikis/help_wiki/docking.py)) |
 
 ### 4. QM/MM Umbrella Sampling Simulations
+- In order to assess the enzymatic activity, the activation free energy barrier height ($`\Delta G^{\ddagger}`$) is the widely used order parameter. $`\Delta G^{\ddagger}`$ can be estimated by using the umbrella sampling on the given reaction coordinates in conjunction with the QM/MM simulation technique. 
+- Scripts to be used in this section:
+
+| Scripts | Instructions |
+| ------ | ------ |
+| umbrella_sampling/**run_ess_us.py** | Run umbrella sampling on the given reaction coordinates in conjunction with the QM/MM simulation technique. Need to get `Amber` (16+) and `wham` installed prior to use. ([Learn more](../../wikis/help_wiki/run_ess_us.py)) |
+| umbrella_sampling/**run_ess_us_restart.py** | Extend the umbrella sampling time. ([Learn more](../../wikis/help_wiki/run_ess_us_restart.py)) |
 
 ### 5. Adaptive Steered Molecular Dynamics Simulations
+- In order to assess the substrate binding, the binding affinity ($`\Delta G_{\text{bind}}`$) is the widely used order parameter. $`\Delta G_{\text{bind}}`$ can be estimated by using the adaptive steered molecular dynamics (ASMD) simulations. 
+- Scripts to be used in this section:
+
+| Scripts | Instructions |
+| ------ | ------ |
+| smd/**run_smd.py** | Run ASMD simulations for a given protein-reactant complex. Need to get `Amber` (16+) installed prior to use. ([Learn more](../../wikis/help_wiki/run_smd.py)) |
