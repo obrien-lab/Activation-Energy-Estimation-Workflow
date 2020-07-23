@@ -10,7 +10,7 @@ This is a package of python (3.X) scripts that are used to estimate activation f
   * [1. Introduction](#1-introduction)
   * [2. Trimerization](#2-trimerization)
   * [3. Substrate Docking](#3-substrate-docking)
-  * [4. Umbrella Sampling with QM/MM Simulations](#4-umbrella-sampling-with-QM/MM-simulations)
+  * [4. Umbrella Sampling with QM/MM Simulations](#4-umbrella-sampling-with-qmmm-simulations)
   * [5. Adaptive Steered Molecular Dynamics Simulations](#5-adaptive-steered-molecular-dynamics-simulations)
 
 ### 1. Introduction
