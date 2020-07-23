@@ -14,19 +14,23 @@ This is a package of python (3.X) scripts that are used to estimate activation f
   * [5. Adaptive Steered Molecular Dynamics Simulations](#5-adaptive-steered-molecular-dynamics-simulations)
 
 ### 1. Introduction
-The workflow includes the following procedures as illustrated in Fig. 1: (1) Backmap from the coarse-grained structure to the all-atom structure; (2) Predict the trimer structure if needed; (3) Predict protein-substrate complex structure using substrate  docking; (4) Estimated activation free energy barrier height based on given reaction coordinates using QM/MM umbrella sampling simulations; (5) Estimate binding affinity using adaptive steered molecular dynamics simulations.
+- The workflow includes the following procedures as illustrated in Fig. 1: (1) [Backmap](https://git.psu.edu/obrien/yang_jiang/cg_simtk_protain_folding#6-backmapping-from-coarse-grained-model-to-all-atom-model) from the coarse-grained structure to the all-atom structure; (2) Predict the trimer structure if needed; (3) Predict protein-substrate complex structure using substrate  docking; (4) Estimated activation free energy barrier height based on given reaction coordinates using QM/MM umbrella sampling simulations; (5) Estimate binding affinity using adaptive steered molecular dynamics simulations.
 
 ```mermaid
 graph TD;
-  A[Coarse-grained protein structure] -->|Backmap| B(All-atom monomer structure)
+  A[Coarse-grained protein structure] -->|Backmapping| B(All-atom monomer structure)
   B-->|Trimerization, if needed| C(All-atom trimer structure)
   B-->|Substrate docking| D(Protein-substrate complex)
   C-->|Substrate docking| D
   D-->|QM/MM umbrella sampling simulations| E[Activation free energy barrier height]
   D-->|Adaptive steered molecular dynamics| F[Substrate binding affinity]
 ```
+**Figure 1**. Workflow diagram
+
+- To run the workflow, use `auto_backmap_docking_us_smd.py` ([Learn more]()). You can also run one of the above steps by using the corresponding script.
 
 ### 2. Trimerization
+
 
 ### 3. Substrate Docking
 
