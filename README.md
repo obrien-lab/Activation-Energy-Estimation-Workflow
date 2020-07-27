@@ -27,7 +27,7 @@ graph TD;
 ```
 **Figure 1**. Workflow diagram
 
-- To run the workflow, use `auto_backmap_docking_us_smd.py` ([Learn more]()). You can also run one of the above steps by using the corresponding script. [:leftwards_arrow_with_hook:](#table-of-contents)
+- To run the workflow, use `auto_backmap_docking_us_smd.py` ([Learn more](../../wikis/help_wiki/auto_backmap_docking_us_smd.py)). You can also run one of the above steps by using the corresponding script. [:leftwards_arrow_with_hook:](#table-of-contents)
 
 ### 2. Trimerization
 - In some special cases, a monomer protein does not have the enzymatic activity. For example, type III Chloramphenicol acetyltransferase ([CAT-III](https://www.uniprot.org/uniprot/P00484#interaction)), which is an effector of chloramphenicol resistance in bacteria, is a homotrimer and constructs its substrate binding pocket by the residues from two monomers. The multimer structure is essential to use when we study the substrate binding and enzymatic activity. In this workflow, we only implemented the procedure for predicting the trimer structure of CAT-III. Users need to modify the source code to implement other multimer predictions.
