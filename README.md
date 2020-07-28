@@ -46,7 +46,7 @@ graph TD;
 | Scripts | Instructions |
 | ------ | ------ |
 | docking/**docking.py** | Predict the protein-reactant complex structure by using the all-atom protein structure and the reactant binding information. Need to get the `Amber` (16+), `Autodock vina` and `Autodock Tools` installed prior to use. ([Learn more](../../wikis/help_wiki/docking.py)) |
-| docking/**auto_backmap_docking.py** | An automated script to call `backmap.py` (found [here](https://git.psu.edu/obrien/yang_jiang/cg_simtk_protain_folding#6-backmapping-from-coarse-grained-model-to-all-atom-model)), `trimerization.py` and `docking.py`. ([Learn more](../../wikis/help_wiki/docking.py)) |
+| docking/**auto_backmap_docking.py** | An automated script to call `backmap.py` (found [here](https://git.psu.edu/obrien/yang_jiang/cg_simtk_protain_folding#6-backmapping-from-coarse-grained-model-to-all-atom-model)), `trimerization.py` and `docking.py`. ([Learn more](../../wikis/help_wiki/auto_backmap_docking.py)) |
 
 [:leftwards_arrow_with_hook:](#table-of-contents)
 
