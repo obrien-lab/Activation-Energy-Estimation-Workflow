@@ -51,7 +51,7 @@ graph TD;
 [:leftwards_arrow_with_hook:](#table-of-contents)
 
 ### 4. QM/MM Umbrella Sampling Simulations
-- In order to assess the enzymatic activity, the activation free energy barrier height ($`\Delta G^{\ddagger}`$) is the widely used order parameter. $`\Delta G^{\ddagger}`$ can be estimated by using the umbrella sampling on the given reaction coordinates in conjunction with the QM/MM simulation technique. 
+- In order to assess the enzymatic activity, the activation free energy barrier height ($`\Delta G^{\ddagger}`$) is the widely used parameter. $`\Delta G^{\ddagger}`$ can be estimated by using the umbrella sampling on the given reaction coordinates in conjunction with the QM/MM simulation technique. 
 - Scripts to be used in this section:
 
 | Scripts | Instructions |
@@ -62,7 +62,7 @@ graph TD;
 [:leftwards_arrow_with_hook:](#table-of-contents)
 
 ### 5. Adaptive Steered Molecular Dynamics Simulations
-- In order to assess the substrate binding, the binding affinity ($`\Delta G_{\text{bind}}`$) is the widely used order parameter. $`\Delta G_{\text{bind}}`$ can be estimated by using the adaptive steered molecular dynamics (ASMD) simulations. 
+- In order to assess the substrate binding, the binding affinity ($`\Delta G_{\text{bind}}`$) is the widely used parameter. $`\Delta G_{\text{bind}}`$ can be estimated by using the adaptive steered molecular dynamics (ASMD) simulations. 
 - Scripts to be used in this section:
 
 | Scripts | Instructions |
