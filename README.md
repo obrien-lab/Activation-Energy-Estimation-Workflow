@@ -4,7 +4,7 @@
 
 This is a package of python (3.X) scripts that are used to estimate activation free energy, as well as the ligand binding affinity, for a protein structure obtained from a [coarse-grained (CG) simulation](https://git.psu.edu/obrien/yang_jiang/cg_simtk_protain_folding). All the scripts are ready to use when users have added the directories (including all the child folders) in `$PATH` (add `export PATH=${PATH}:/path/to/one/folder/` in your `~/.bashrc` file) and have granted the execution permission (`chmod -R +x ./act_ene_estimation/`) for all the scripts. 
 
-:warning: The workflow requires [`Amber (16+)`](http://ambermd.org/), [`Autodock vina`](http://vina.scripps.edu/), [`Autodock Tools`](http://autodock.scripps.edu/resources/adt), [`wham`](http://membrane.urmc.rochester.edu/?page_id=126), and [`SymmDock`](http://bioinfo3d.cs.tau.ac.il/SymmDock/php.php) installed prior to use. Please click `Learn more` in the following script instruction tables to find detailed instruction of usage and basic theory used in the script.
+:warning: The workflow requires [`Amber (16+)`](http://ambermd.org/), [`Autodock vina`](http://vina.scripps.edu/), [`Autodock Tools`](http://autodock.scripps.edu/resources/adt), [`wham`](http://membrane.urmc.rochester.edu/?page_id=126), and [`SymmDock`](http://bioinfo3d.cs.tau.ac.il/SymmDock) installed prior to use. Please click `Learn more` in the following script instruction tables to find detailed instruction of usage and basic theory used in the script.
 
 ### Table of Contents
   * [1. Introduction](#1-introduction)
