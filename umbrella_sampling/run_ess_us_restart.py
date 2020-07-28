@@ -12,7 +12,7 @@ import mdtraj as mdt
 ################# Arguments #################
 if len(sys.argv) != 3:
     print('Error: Wrong number of arguments')
-    print('Usage: python run_neb.py cntrl_file restart_idx')
+    print('Usage: python run_ess_us_restart.py cntrl_file restart_idx')
     sys.exit()
 cntrl_file = sys.argv[1]
 restart_idx = int(sys.argv[2])
