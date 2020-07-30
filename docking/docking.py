@@ -271,7 +271,7 @@ quit\n''')
     f.write('''equilibration in TIP3P water box with increasing restraints
  &cntrl
   imin=0, ntx=5, irest=1,
-  nstlim='''+str(int(steps_4))+''', dt=0.002,
+  nstlim='''+str(int(steps_4))+''', dt=0.001,
   ntf=2, ntc=2,
   temp0='''+str(temp)+''',
   ntpr=1000, ntwx=5000,
