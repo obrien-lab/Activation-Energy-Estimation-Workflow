@@ -420,7 +420,7 @@ if (stage <= 2*n_windows+1 and if_wham == 1) or only_wham == 1:
             min_pmf = data[1]
     
     for data in pmf_list:
-        ff.write('%12.6f %12.6f %12.6f\n'%(data[0], data[1]-min_pmf, 1.91*data[2]))
+        ff.write('%12.6f %12.6f %12.6f\n'%(data[0], data[1]-min_pmf, 1.96*data[2]))
             
     f.close()
     ff.close()
