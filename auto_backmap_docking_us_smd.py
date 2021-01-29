@@ -55,6 +55,7 @@ def parse_input(cntrl_file):
     pull_lig_mask = []
     pull_prot_mask = []
     smd_steps_per_stage = 200000
+    cpptraj_exec = ''
     
     f = open(cntrl_file, 'r')
     for line in f.readlines():
@@ -211,6 +212,9 @@ def parse_input(cntrl_file):
         if len(smd_ligand_list) != len(pull_lig_mask) or len(pull_lig_mask) != len(pull_prot_mask):
             print('Error: Number of smd_ligand_idx, pull_lig_mask and pull_prot_mask must be the same (%d, %d, %d)'%(
                     len(smd_ligand_list), len(pull_lig_mask), len(pull_prot_mask)))
+            tag_error = True
+        if cpptraj_exec == '':
+            print('Error: No cpptraj_exec assigned')
             tag_error = True
         
     if tag_error:
